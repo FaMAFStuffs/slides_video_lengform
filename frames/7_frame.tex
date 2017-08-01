@@ -1,0 +1,36 @@
+\begin{frame}
+	\begin{itemize}
+		\item Para $1 \leq i \leq k$, sea $M_{i}^{+}$ una máquina tal que:
+		\[
+			\begin{array}{lcl}
+				B \shortmid^{x_{1}} B \dotsc B \shortmid^{x_{k}} B \alpha_{1} B \dotsc B \alpha_{k} &\overset{\ast}{\vdash}& B
+				\shortmid^{x_{1}} B \dotsc B \shortmid^{x_{i-1}} B \shortmid^{x_{i}+1} B \shortmid^{x_{i+1}} \dotsc B
+				\shortmid^{x_{k}} B \alpha_{1} B \dotsc B \alpha_{k} \\
+				\uparrow && \uparrow \\
+				q_{0} & & q_{f}
+			\end{array}
+		\]
+
+		\item Para $1 \leq i \leq k$, sea $M_{i}^{\dot{-}}$ una máquina tal que:
+		\[
+			\begin{array}{lcl}
+				B \shortmid^{x_{1}} B \dotsc B \shortmid^{x_{k}} B \alpha_{1} B \dotsc B \alpha_{k} &\overset{\ast}{\vdash}& B
+					\shortmid^{x_{1}} B \dotsc B \shortmid^{x_{i-1}} B \shortmid^{x_{i} \dot{-} 1} B \shortmid^{x_{i+1}} \dotsc B
+					\shortmid^{x_{k}} B \alpha_{1} B \dotsc B \alpha_{k} \\
+				\uparrow && \uparrow \\
+				q_{0} && q_{f}
+			\end{array}
+		\]
+
+		\item Para $1 \leq i \leq k$ y $a \in \Sigma $, sea $M_{i}^{a}$ una máquina tal que:
+		\[
+			\begin{array}{lcl}
+				B \shortmid^{x_{1}} B \dotsc B \shortmid^{x_{k}} B \alpha_{1} B \dotsc B \alpha_{k} &\overset{\ast}{\vdash}& B
+					\shortmid^{x_{1}} B \dotsc B \shortmid^{x_{k}} B \alpha_{1} B \dotsc B \alpha_{i-1} B \alpha_{i} a B
+					\alpha_{i+1} B \dotsc B \alpha_{k} \\
+				\uparrow && \uparrow \\
+				q_{0} && q_{f}
+			\end{array}
+		\]
+	\end{itemize}
+\end{frame}

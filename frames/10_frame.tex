@@ -1,0 +1,36 @@
+\begin{frame}
+  \begin{itemize}
+    \item Para $1 \leq i,j \leq k$, sea $M_{i\leftarrow j}^{\#}$ una máquina tal que:
+    \[
+      \begin{array}{lcl}
+        B \shortmid^{x_{1}} B \dotsc B \shortmid^{x_{k}} B \alpha_{1} B \dotsc B \alpha_{k} &\overset{\ast}{\vdash}& B
+          \shortmid^{x_{1}} B \dotsc B \shortmid^{x_{i-1}} B \shortmid^{x_{j}} B \shortmid^{x_{i+1}} B \dotsc B
+          \shortmid^{x_{k}} B \alpha_{1} B \dotsc B \alpha_{k} \\
+        \uparrow && \uparrow \\
+        q_{0} & & q_{f}
+      \end{array}
+    \]
+
+    \item Para $1 \leq i \leq k$, sea $M_{i\leftarrow 0}$ una máquina tal que:
+    \[
+      \begin{array}{lcl}
+        B \shortmid^{x_{1}} B \dotsc B \shortmid^{x_{k}} B \alpha_{1} B \dotsc B \alpha_{k} &\overset{\ast}{\vdash}& B
+          \shortmid^{x_{1}} B \dotsc B \shortmid^{x_{i-1}} B B \shortmid^{x_{i+1}} B \dotsc B \shortmid^{x_{k}} B
+          \alpha_{1} B \dotsc B \alpha_{k} \\
+        \uparrow && \uparrow \\
+        q_{0} & & q_{f}
+      \end{array}
+    \]
+
+    \item Para $1 \leq i \leq k$, sea $M_{i\leftarrow \varepsilon}$ una máquina tal que:
+    \[
+      \begin{array}{lcl}
+        B \shortmid^{x_{1}} B \dotsc B \shortmid^{x_{k}} B \alpha_{1} B \dotsc B \alpha_{k} &\overset{\ast}{\vdash}& B
+          \shortmid^{x_{1}} B \dotsc B \shortmid^{x_{k}} B \alpha_{1} B \dotsc B \alpha_{i-1} B B \alpha_{i+1} B \dotsc
+          B \alpha_{k} \\
+        \uparrow && \uparrow \\
+        q_{0} & & q_{f}
+      \end{array}
+    \]
+  \end{itemize}
+\end{frame}
