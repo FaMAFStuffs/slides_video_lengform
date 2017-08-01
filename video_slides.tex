@@ -1,11 +1,11 @@
-\documentclass[12pt]{beamer}
+\documentclass[11pt]{beamer}
 \usetheme{Warsaw}
 \usepackage[utf8]{inputenc}
 \usepackage{amsmath}
 \usepackage{amsfonts}
 \usepackage{amssymb}
 \usepackage{graphicx}
-\setbeamersize{text margin left=8pt,text margin right=8pt}
+\setbeamersize{text margin left=6pt,text margin right=6pt}
 
 \author{Agustín Curto}
 \title{Turing vence a von Neumann}
@@ -24,31 +24,36 @@
 	\titlepage
 \end{frame}
 
-\begin{frame}
-	\textbf{Notación}: dados $x_{1}, \dotsc, x_{n} \in \omega$ y $\alpha_{1}, \dotsc,\alpha_{m} \in \SIGMA$, con $n, m \in
-	\omega $, usaremos:
-	\begin{equation*}
-		\lVert x_{1}, \dotsc, x_{n}, \alpha_{1}, \dotsc, \alpha_{m} \rVert
-	\end{equation*}
-
-	\PN para denotar el estado
-	\begin{equation*}
-		\left((x_{1}, \dotsc, x_{n}, 0, \dotsc), (\alpha_{1}, \dotsc, \alpha_{m}, \varepsilon, \dotsc)\right)
-	\end{equation*}
-
-	\PN Notese que por ejemplo:
-	\begin{eqnarray*}
-	\lVert x \rVert &=& \left((x, 0, \dotsc), (\varepsilon, \dotsc)\right) \text{Para } n = 1, m = 0 \\
-	\lVert \Diamond \rVert &=& \left((0, \dotsc), (\varepsilon, \dotsc)\right) \text{Para } n = m = 0
-	\end{eqnarray*}
-
-	\PN Ademas es claro que:
-	\[
-		\lVert x_{1}, \dotsc, x_{n}, \alpha_{1}, \dotsc, \alpha_{m} \rVert = \lVert x_{1}, \dotsc, x_{n},
-		\overset{i}{\overbrace{0, \dotsc, 0}}, \alpha_{1}, \dotsc, \alpha_{m}, \overset{j}{\overbrace{\varepsilon, \dotsc,
-		\varepsilon}} \rVert
-	\]
-	cualesquiera sean $i, j \in \omega$.
-\end{frame}
+\input{1_frame}
+\input{2_frame}
+\input{3_frame}
+\input{4_frame}
+\input{5_frame}
+\input{6_frame}
+\input{7_frame}
+\input{8_frame}
+\input{9_frame}
+\input{10_frame}
+\input{11_frame}
+\input{12_frame}
+\input{13_frame}
+\input{14_frame}
+\input{15_frame}
+\input{16_frame}
+\input{17_frame}
+\input{18_frame}
+\input{19_frame}
+\input{20_frame}
+\input{21_frame}
+\input{22_frame}
+\input{23_frame}
+\input{24_frame}
+\input{25_frame}
+\input{26_frame}
+\input{27_frame}
+\input{28_frame}
+\input{29_frame}
+\input{30_frame}
+\input{31_frame}
 
 \end{document}

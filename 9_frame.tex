@@ -1,0 +1,35 @@
+\begin{frame}
+  \PN Análogamente, para $j=1,\dotsc,k$, sea $IF_{j}$ una máquina tal que:
+  \begin{itemize}
+    \item Si $x_{j} \neq 0$, entonces:
+    \[
+      \begin{array}{lcl}
+        B \shortmid^{x_{1}} B \dotsc B \shortmid^{x_{k}} B \alpha_{1} B \dotsc B \alpha_{k} &\overset{\ast}{\vdash}& B
+          \shortmid^{x_{1}} B \dotsc B \shortmid^{x_{k}} B \alpha_{1} B \dotsc B \alpha_{k} \\
+        \uparrow && \uparrow \\
+        q_{0} && q_{si}
+      \end{array}
+    \]
+
+    \item Si $x_{j} = 0$, entonces:
+    \[
+      \begin{array}{lcl}
+        B \shortmid^{x_{1}} B \dotsc B \shortmid^{x_{k}} B \alpha_{1} B \dotsc B \alpha_{k} &\overset{\ast}{\vdash}& B
+          \shortmid^{x_{1}} B \dotsc B \shortmid^{x_{k}} B \alpha_{1} B \dotsc B \alpha_{k} \\
+        \uparrow && \uparrow \\
+        q_{0} && q_{no}
+      \end{array}
+    \]
+
+    \item Para $1 \leq i,j \leq k$, sea $M_{i\leftarrow j}^{\ast}$ una máquina tal que:
+    \[
+      \begin{array}{lcl}
+        B \shortmid^{x_{1}} B \dotsc B \shortmid^{x_{k}} B \alpha_{1} B \dotsc B \alpha_{k} &\overset{\ast}{\vdash}& B
+          \shortmid^{x_{1}} B \dotsc B \shortmid^{x_{k}} B \alpha_{1} B \dotsc B \alpha_{i-1} B \alpha_{j} B
+          \alpha_{i+1} B \dotsc B \alpha_{k} \\
+        \uparrow && \uparrow \\
+        q_{0} & & q_{f}
+      \end{array}
+    \]
+  \end{itemize}
+\end{frame}

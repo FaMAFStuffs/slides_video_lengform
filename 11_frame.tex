@@ -1,0 +1,16 @@
+\begin{frame}
+  A continuacion veremos un ejemplo de como se arma la maquina
+  simuladora de un programa dado. Sea $\Sigma =\{\&,\#\}$ y sea $\mathcal{P}$
+  el siguiente programa%
+  \begin{equation*}
+  \begin{array}{ll}
+  \mathrm{L}3 & \mathrm{N}4\leftarrow \mathrm{N}4+1 \\
+  & \mathrm{P}1\leftarrow \ ^{\curvearrowright }\mathrm{P}1 \\
+  & \mathrm{IF\ P}1\ \mathrm{BEGINS\ }\&\ \mathrm{GOTO}\;\mathrm{L}3 \\
+  & \mathrm{P}3\leftarrow \mathrm{P}3.\#%
+  \end{array}%
+  \end{equation*}%
+  Tomemos $k=5$. Es claro que $k\geq N(\mathcal{P})=4$. A la maquina que
+  simulara a $\mathcal{P}$ respecto de $k$, la llamaremos $M_{sim}$ y sera la
+  siguiente:
+\end{frame}
