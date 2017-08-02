@@ -1,6 +1,8 @@
 \begin{frame}
-	\begin{itemize}
-		\item Para $1 \leq i \leq k$, sea $M_{i}^{+}$ una máquina tal que:
+	\begin{block}{Instrucción $\mathrm{N}\bar{\imath} \leftarrow \mathrm{N}\bar{\imath} + 1$}
+		\PN Para $1 \leq i \leq k$, sea $M_{i,k}^{+}$ una máquina tal que cualesquiera sean $x_{1}, \dotsc, x_{n} \in
+		\omega$ y $\alpha_{1}, \dotsc,\alpha_{m} \in \SIGMA$
+		\minLetter
 		\[
 			\begin{array}{lcl}
 				B \shortmid^{x_{1}} B \dotsc B \shortmid^{x_{k}} B \alpha_{1} B \dotsc B \alpha_{k} &\overset{\ast}{\vdash}& B
@@ -10,8 +12,13 @@
 				q_{0} & & q_{f}
 			\end{array}
 		\]
+	\end{block}
 
-		\item Para $1 \leq i \leq k$, sea $M_{i}^{\dot{-}}$ una máquina tal que:
+	\normLetter
+	\begin{block}{Instrucción $\mathrm{N}\bar{\imath} \leftarrow \mathrm{N}\bar{\imath} \dot{-} 1$}
+		\PN Para $1 \leq i \leq k$, sea $M_{i,k}^{\dot{-}}$ una máquina tal que cualesquiera sean $x_{1}, \dotsc, x_{n} \in
+		\omega$ y $\alpha_{1}, \dotsc,\alpha_{m} \in \SIGMA$
+		\minLetter
 		\[
 			\begin{array}{lcl}
 				B \shortmid^{x_{1}} B \dotsc B \shortmid^{x_{k}} B \alpha_{1} B \dotsc B \alpha_{k} &\overset{\ast}{\vdash}& B
@@ -21,16 +28,5 @@
 				q_{0} && q_{f}
 			\end{array}
 		\]
-
-		\item Para $1 \leq i \leq k$ y $a \in \Sigma $, sea $M_{i}^{a}$ una máquina tal que:
-		\[
-			\begin{array}{lcl}
-				B \shortmid^{x_{1}} B \dotsc B \shortmid^{x_{k}} B \alpha_{1} B \dotsc B \alpha_{k} &\overset{\ast}{\vdash}& B
-					\shortmid^{x_{1}} B \dotsc B \shortmid^{x_{k}} B \alpha_{1} B \dotsc B \alpha_{i-1} B \alpha_{i} a B
-					\alpha_{i+1} B \dotsc B \alpha_{k} \\
-				\uparrow && \uparrow \\
-				q_{0} && q_{f}
-			\end{array}
-		\]
-	\end{itemize}
+	\end{block}
 \end{frame}
