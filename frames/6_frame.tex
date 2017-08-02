@@ -1,24 +1,27 @@
 \begin{frame}
-	\PN Armaremos la máquina simuladora como concatenación de máquinas, cada una de las cuales simularán, vía la
-	representación anterior, el funcionamiento de las distintas instrucciones de $\mathcal{P}$. Para esto, a
-	continuacion describiremos para los distintos tipos de instrucciones
-	posibles de $\mathcal{P}$, sus respectivas maquinas asociadas. Asumiremos
-	que en $\mathcal{P}$ no hay instrucciones de la forma $\mathrm{GOTO}\;%
-	\mathrm{L}\bar{m}$ ni de la forma $\mathrm{L}\bar{n}\ \mathrm{GOTO}\;\mathrm{%
-	L}\bar{m}$. Esto simplificara un poco la costruccion de la maquina
-	simuladora y de hecho lo podemos hacer ya que toda funcion $\Sigma $%
-	-computable puede ser computada por un programa sin este tipo de
-	instrucciones, tal como lo veremos en un lema mas adelante.
+	\begin{itemize}
+		\item Armaremos la máquina simuladora como concatenación de máquinas. Para esto, a continuación describiremos, para
+		los distintos tipos de instrucciones posibles de $\mathcal{P}$, sus respectivas máquinas asociadas.
 
-	En esta etapa solo describiremos que propiedades tendra que tener cada
-	maquina simuladora de cada tipo posible de instruccion, y mas adelante
-	mostraremos como pueden ser construidas efectivamente dichas maquinas. Todas
-	las maquinas descriptas tendran a $\shortmid $ como unit y a $B$ como
-	blanco, tendran a $\Sigma $ como su alfabeto terminal y su alfabeto mayor
-	sera $\Gamma =\Sigma \cup \{B,\shortmid \}\cup \{\tilde{a}:a\in \Sigma \cup
-	\{\shortmid \}\}$. Ademas tendran uno o dos estados finales con la propiedad
-	de que si $q$ es un estado final, entonces $\delta (q,\sigma )=\emptyset $,
-	para cada $\sigma \in \Gamma $. Esta propiedad es importante ya que nos
-	permitira concatenar pares de dichas maquinas identificando algun estado
-	final de la primera con el inicial de la segunda.
+		\item Asumiremos que en $\mathcal{P}$ no hay instrucciones de la forma $\mathrm{GOTO} \ \mathrm{L}\bar{m}$, ni de la
+		forma $\mathrm{L}\bar{n} \ \mathrm{GOTO} \ \mathrm{L}\bar{m}$.
+
+		\item En esta etapa solo describiremos que propiedades tendrá que tener cada máquina simuladora de cada tipo posible
+		de instrucción, y más adelante mostraremos como pueden ser construídas efectivamente dichas máquinas.
+
+		\item Todas las máquinas descriptas tendrán:
+		 	\begin{itemize}
+				\item $\shortmid$ como unit
+				\item $B$ como blanco
+				\item $\Sigma$ como su alfabeto terminal
+				\item su alfabeto mayor será $\Gamma = \Sigma \cup \{B,\shortmid\} \cup \{\tilde{a}: a \in \Sigma \cup
+					\{\shortmid\}\}$.
+				\item uno o dos estados finales con la siguiente propiedad:
+					\vspace{3mm}
+					\begin{center}
+						Si $q$ es un estado final $\Rightarrow \delta(q,\sigma) = \emptyset$, para cada $\sigma \in \Gamma$
+					\end{center}
+			\end{itemize}
+	\end{itemize}
+
 \end{frame}
