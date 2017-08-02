@@ -1,11 +1,11 @@
 \begin{frame}
   \begin{block}{}
-    \PN Supongamos que $(\vec{x},\vec{\alpha}) \in (\omega^{n} \times \Sigma^{\ast m}) - D_{f}$. Deberemos ver que $M$
-    no termina partiendo de:
-    \begin{enumerate}
-      \item[(*)] $\left\lfloor q_{0} B \shortmid^{x_{1}} B \dotsc B \shortmid^{x_{n}} B \alpha_{1} B \dotsc B \alpha_{m}
-        B \right\rfloor$
-    \end{enumerate}
+    \PN Supongamos que $(\vec{x},\vec{\alpha}) \in (\omega^{n} \times \Sigma^{\ast m}) - D_{f}$. Debemos ver que $M$ no
+    termina partiendo de:
+    \begin{center}
+      $\left\lfloor q_{0} B \shortmid^{x_{1}} B \dotsc B \shortmid^{x_{n}} B \alpha_{1} B \dotsc B \alpha_{m} B
+      \right\rfloor$ \textcolor{red}{(*)}
+    \end{center}
 
     \PN Primero notemos que, ya que $\mathcal{P}$ computa a $f$, tenemos que $\mathcal{P}$ no termina partiendo de
     $\lVert x_{1}, \dotsc, x_{n}, \alpha_{1}, \dotsc, \alpha_{m}\rVert$ por lo cual $\mathcal{P}$ no termina partiendo
@@ -14,17 +14,10 @@
       \lVert x_{1}, \dotsc, x_{n}, \overset{k-n}{\overbrace{0,\dotsc,0}}, \alpha_{1}, \dotsc, \alpha_{m},
       \overset{k-m}{\overbrace{\varepsilon,\dotsc,\varepsilon}} \rVert
     \end{equation*}
-    \PN lo cual implica, por el primer Lema, que:
-    \begin{enumerate}
-      \item[(**)] $M_{sim}$ no termina partiendo de $\left\lfloor q_{0} B \shortmid^{x_{1}} B \dotsc B \shortmid^{x_{n}}
-      B^{k-n}B \alpha_{1} B \dotsc B \alpha_{m} B \right\rfloor$
-    \end{enumerate}
-
-    \PN Ahora, nótese que si hacemos funcionar a $M$ desde la descripción instantánea dada en (*), llegaremos
-    indefectiblemente a la siguiente descripción instantánea:
-    \begin{equation*}
-      \left\lfloor q_{2} B \shortmid^{x_{1}} B \dotsc B \shortmid^{x_{n}} B^{k-n}B \alpha_{1} B \dotsc B \alpha_{m} B
-      \right\rfloor
-    \end{equation*}
+    \PN lo cual implica, por el primer Lema, que $M_{sim}$ no termina partiendo de:
+    \begin{center}
+      $\left\lfloor q_{0} B \shortmid^{x_{1}} B \dotsc B \shortmid^{x_{n}} B^{k-n}B \alpha_{1} B \dotsc B \alpha_{m} B
+      \right\rfloor$ \textcolor{red}{(**)}
+    \end{center}
   \end{block}
 \end{frame}
