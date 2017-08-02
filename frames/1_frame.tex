@@ -1,19 +1,23 @@
 \begin{frame}
-	\textbf{Notación}: Dados $x_{1}, \dotsc, x_{n} \in \omega$ y $\alpha_{1}, \dotsc,\alpha_{m} \in \SIGMA$, con $n, m \in
-	\omega $, usaremos:
-	\begin{equation*}
-		\lVert x_{1}, \dotsc, x_{n}, \alpha_{1}, \dotsc, \alpha_{m} \rVert
-	\end{equation*}
+	\frametitle{Introduciendo notación}
 
-	\PN para denotar el estado
-	\begin{equation*}
-		\left((x_{1}, \dotsc, x_{n}, 0, \dotsc), (\alpha_{1}, \dotsc, \alpha_{m}, \varepsilon, \dotsc)\right)
-	\end{equation*}
+	\begin{block}{Notación}
+		\PN Dados $x_{1}, \dotsc, x_{n} \in \omega$ y $\alpha_{1}, \dotsc,\alpha_{m} \in \SIGMA$, con $n, m \in \omega $,
+		usaremos:
+		\begin{equation*}
+			\lVert x_{1}, \dotsc, x_{n}, \alpha_{1}, \dotsc, \alpha_{m} \rVert
+		\end{equation*}
+
+		\PN para denotar el estado
+		\begin{equation*}
+			\left((x_{1}, \dotsc, x_{n}, 0, \dotsc), (\alpha_{1}, \dotsc, \alpha_{m}, \varepsilon, \dotsc)\right)
+		\end{equation*}
+	\end{block}
 
 	\PN Nótese que por ejemplo:
 	\begin{eqnarray*}
-	\lVert x \rVert &=& \left((x, 0, \dotsc), (\varepsilon, \dotsc)\right) \qquad \text{Para } n = 1, m = 0 \\
-	\lVert \Diamond \rVert &=& \left((0, \dotsc), (\varepsilon, \dotsc)\right) \qquad \ \ \; \text{Para } n = m = 0
+		\lVert x \rVert &=& \left((x, 0, \dotsc), (\varepsilon, \dotsc)\right) \qquad \text{Para } n = 1, m = 0 \\
+		\lVert \Diamond \rVert &=& \left((0, \dotsc), (\varepsilon, \dotsc)\right) \qquad \ \ \; \text{Para } n = m = 0
 	\end{eqnarray*}
 
 	\PN Además es claro que:
@@ -22,5 +26,5 @@
 		\overset{i}{\overbrace{0, \dotsc, 0}}, \alpha_{1}, \dotsc, \alpha_{m}, \overset{j}{\overbrace{\varepsilon, \dotsc,
 		\varepsilon}} \rVert
 	\]
-	cualesquiera sean $i, j \in \omega$.
+	\PN cualesquiera sean $i, j \in \omega$.
 \end{frame}

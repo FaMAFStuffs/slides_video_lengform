@@ -1,18 +1,20 @@
 \begin{frame}
-	\textbf{Probaremos}: Toda función $\Sigma$-computable es $\Sigma$-Turing computable.
+	\frametitle{Toda función $\Sigma$-computable es $\Sigma$-Turing computable}
 
-	\vspace{3mm}
-	\PN Si $f$ es una función $\Sigma$-mixta que es computada por un programa $\mathcal{P} \in
-	\mathrm{Pro}^{\Sigma}$, entonces existe una máquina de Turing determinística con unit $M$ la cual computa a $f$.
+	\begin{alertblock}{Probaremos}
+		\PN Si $f$ es una función $\Sigma$-mixta que es computada por un programa $\mathcal{P} \in
+		\mathrm{Pro}^{\Sigma}$, entonces existe una máquina de Turing determinística con unit $M$ la cual computa a $f$.
+	\end{alertblock}
 
-	\vspace{3mm}
-	\textbf{Definición}: Dado $\mathcal{P} \in \mathrm{Pro}^{\Sigma}$, definamos:
-	\begin{eqnarray*}
-		N(\mathcal{P}) &=& \text{menor k} \in \mathbb{N}\ \text{tal que las variables que ocurren en } \mathcal{P} \\
-		&& \text{están todas en la lista N}1, \dotsc, \mathrm{N}\bar{k}, \mathrm{P}1, \dotsc, \mathrm{P}\bar{k}
-	\end{eqnarray*}
+	\begin{block}{Definición}
+		\PN Dado $\mathcal{P} \in \mathrm{Pro}^{\Sigma}$, definamos:
+		\begin{eqnarray*}
+			N(\mathcal{P}) &=& \text{menor k} \in \mathbb{N}\ \text{tal que las variables que ocurren en } \mathcal{P} \\
+			&& \text{están todas en la lista N}1, \dotsc, \mathrm{N}\bar{k}, \mathrm{P}1, \dotsc, \mathrm{P}\bar{k}
+		\end{eqnarray*}
+	\end{block}
 
-	\PN \underline{Ejemplo}: Sea $\Sigma = \{\&,\#\}$, si $\mathcal{P}$ es el siguiente programa:
+	\PN \underline{\textbf{Ejemplo:}} Sea $\Sigma = \{\&,\#\}$, si $\mathcal{P}$ es el siguiente programa:
 	\begin{equation*}
 		\begin{array}{ll}
 			\mathrm{L}1 & \mathrm{N}4\leftarrow \mathrm{N}4+1 \\
@@ -20,5 +22,5 @@
 			& \mathrm{IF\ N}1\neq 0\ \mathrm{GOTO}\;\mathrm{L}1
 		\end{array}
 	\end{equation*}
-	entonces tenemos $N(\mathcal{P})=4$
+	\PN entonces tenemos $N(\mathcal{P})=4$
 \end{frame}
