@@ -1,26 +1,17 @@
 \begin{frame}
-  \PN $I_{j}$ cumplirá que:
+  \PN Para cada $j \geq 1$, sea $D_{j}$ la máquina siguiente:
+  \begin{figure}[h]
+    \centering
+    \includegraphics[scale=0.3]{graphics/figure_1.png}
+  \end{figure}
+  \PN Nótese que:
   \begin{equation*}
     \begin{array}{lcr}
-      \alpha B \beta_{j} B \dotsc B \beta_{2} B \beta_{1} B \gamma &\overset{\ast}{\vdash}& \alpha B \beta_{j} B \dotsc
-        B \beta_{2} B \beta_{1} B \gamma \\
-      \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \uparrow && \uparrow \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \
-        \ \ \ \ \ \ \ \ \ \  \\
-      \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ q_{0} && q_{f} \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \
-        \ \ \ \ \ \ \ \
-    \end{array}%
-  \end{equation*}%
-  \PN siempre que $\alpha, \gamma \in \Gamma^{\ast}, \beta_{1}, \dotsc, \beta_{j} \in (\Gamma - \{B\})^{\ast}$. Dejamos
-  al lector la manufactura de esta máquina.
-
-  \vspace{3mm}
-  \PN Para $j \geq 1$, sea $TD_{j}$ una máquina con un solo estado final $q_{f}$ y tal que:
-  \begin{equation*}
-    \begin{array}{ccc}
-      \alpha B \gamma &\overset{\ast}{\vdash}& \alpha BB \gamma \\
-      \uparrow  && \uparrow \ \ \\
-      q_{0} &  & q_{f} \ \
+      \alpha B \beta_{1} B \beta_{2} B \dotsc B \beta_{j} B \gamma &\overset{\ast}{\vdash}& \alpha B \beta_{1} B
+        \beta_{2} B \dotsc B \beta_{j} B \gamma \\
+      \ \ \uparrow && \uparrow \ \ \\
+      \ \ q_{0} && q_{f}\ \
     \end{array}
   \end{equation*}
-  \PN cada vez que $\alpha, \gamma \in \Gamma^{\ast}$ y $\gamma$ tiene exactamente $j$ ocurrencias de $B$.
+  \PN siempre que $\alpha, \gamma \in \Gamma^{\ast}, \beta_{1}, \dotsc, \beta_{j} \in (\Gamma - \{B\})^{\ast}$.
 \end{frame}

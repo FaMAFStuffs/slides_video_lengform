@@ -1,7 +1,26 @@
 \begin{frame}
-  \PN \underline{\textbf{Ejemplo:}} Sea $\Sigma = \{\&,\#\}$ podemos tomar $TD_{3}$ igual a la siguiente máquina
-  \begin{figure}[h]
-    \centering
-    \includegraphics[scale=0.26]{graphics/figure_3.png}
-  \end{figure}
+  \PN $I_{j}$ cumplirá que:
+  \begin{equation*}
+    \begin{array}{lcr}
+      \alpha B \beta_{j} B \dotsc B \beta_{2} B \beta_{1} B \gamma &\overset{\ast}{\vdash}& \alpha B \beta_{j} B \dotsc
+        B \beta_{2} B \beta_{1} B \gamma \\
+      \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \uparrow && \uparrow \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \
+        \ \ \ \ \ \ \ \ \ \  \\
+      \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ q_{0} && q_{f} \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \
+        \ \ \ \ \ \ \ \
+    \end{array}%
+  \end{equation*}%
+  \PN siempre que $\alpha, \gamma \in \Gamma^{\ast}, \beta_{1}, \dotsc, \beta_{j} \in (\Gamma - \{B\})^{\ast}$. Dejamos
+  al lector la manufactura de esta máquina.
+
+  \vspace{3mm}
+  \PN Para $j \geq 1$, sea $TD_{j}$ una máquina con un solo estado final $q_{f}$ y tal que:
+  \begin{equation*}
+    \begin{array}{ccc}
+      \alpha B \gamma &\overset{\ast}{\vdash}& \alpha BB \gamma \\
+      \uparrow  && \uparrow \ \ \\
+      q_{0} &  & q_{f} \ \
+    \end{array}
+  \end{equation*}
+  \PN cada vez que $\alpha, \gamma \in \Gamma^{\ast}$ y $\gamma$ tiene exactamente $j$ ocurrencias de $B$.
 \end{frame}
