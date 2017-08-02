@@ -1,46 +1,27 @@
 \begin{frame}
-  \begin{lemma}
-  \label{simulacion}Sea $\mathcal{P}\in \mathrm{Pro}^{\Sigma }$ y sea $k\geq N(%
-  \mathcal{P})$. Supongamos que en $\mathcal{P}$ no hay instrucciones de la
-  forma $\mathrm{GOTO}\;\mathrm{L}\bar{m}$ ni de la forma $\mathrm{L}\bar{n}\
-  \mathrm{GOTO}\;\mathrm{L}\bar{m}$. Para cada $a\in \Sigma \cup \{\shortmid \}
-  $, sea $\tilde{a}$ un nuevo simbolo. Sea $\Gamma =\Sigma \cup \{B,\shortmid
-  \}\cup \{\tilde{a}:a\in \Sigma \cup \{\shortmid \}\}$. Entonces hay una
-  maquina de Turing deterministica con unit $M=\left( Q,\Gamma ,\Sigma ,\delta
-  ,q_{0},B,\shortmid ,\{q_{f}\}\right) $ la cual satisface
+  \begin{alertblock}{Lema}
+    \PN Sea $\mathcal{P} \in \mathrm{Pro}^{\Sigma}$ y sea $k \geq N(\mathcal{P})$. Supongamos que en $\mathcal{P}$ no
+    hay instrucciones de la forma $\mathrm{GOTO} \ \mathrm{L}\bar{m}$ ni de la forma $\mathrm{L}\bar{n} \ \mathrm{GOTO}
+    \ \mathrm{L}\bar{m}$. Sean:
+    \begin{itemize}
+      \item Para cada $a \in \Sigma \cup \{\shortmid\}$, sea $\tilde{a}$ un nuevo símbolo
+      \item $\Gamma = \Sigma \cup \{B, \shortmid\} \cup \{\tilde{a}: a \in \Sigma \cup \{\shortmid\}\}$
+    \end{itemize}
+    \PN entonces existe una máquina de Turing determinística con unit $M = \left(Q, \Gamma, \Sigma, \delta, q_{0}, B,
+    \shortmid,\{q_{f}\}\right)$, la cual satisface:
+    \begin{enumerate}[1)]
+      \item $\delta (q_{f},\sigma) = \emptyset$, para cada $\sigma \in \Gamma$.
 
-  \begin{enumerate}
-  \item[(1)] $\delta (q_{f},\sigma )=\emptyset $, para cada $\sigma \in \Gamma
-  $.
-
-  \item[(2)] Cualesquiera sean $x_{1},...,x_{k}\in \omega $ y $\alpha
-  _{1},...,\alpha _{k}\in \Sigma ^{\ast }$, el programa $\mathcal{P}$ se
-  detiene partiendo del estado%
-  \begin{equation*}
-  \left\Vert x_{1},...,x_{k},\alpha _{1},...,\alpha _{k}\right\Vert
-  \end{equation*}%
-  sii $M$ se detiene partiendo de la descripcion instantanea%
-  \begin{equation*}
-  \left\lfloor q_{0}B\shortmid ^{x_{1}}B...B\shortmid ^{x_{k}}B\alpha
-  _{1}B...B\alpha _{k}B\right\rfloor
-  \end{equation*}
-
-  \item[(3)] Si $x_{1},...,x_{k}\in \omega $ y $\alpha _{1},...,\alpha _{k}\in
-  \Sigma ^{\ast }$ son tales que $\mathcal{P}$ se detiene partiendo del estado%
-  \begin{equation*}
-  \left\Vert x_{1},...,x_{k},\alpha _{1},...,\alpha _{k}\right\Vert
-  \end{equation*}%
-  y llega al estado%
-  \begin{equation*}
-  \left\Vert y_{1},...,y_{k},\beta _{1},...,\beta _{k}\right\Vert
-  \end{equation*}%
-  entonces%
-  \begin{equation*}
-  \left\lfloor q_{0}B\shortmid ^{x_{1}}B...B\shortmid ^{x_{k}}B\alpha
-  _{1}B...B\alpha _{k}B\right\rfloor \overset{\ast }{\underset{M}{\vdash }}%
-  \left\lfloor q_{f}B\shortmid ^{y_{1}}B...B\shortmid ^{y_{k}}B\beta
-  _{1}B...B\beta _{k}B\right\rfloor
-  \end{equation*}
-  \end{enumerate}
-  \end{lemma}
+      \item Cualesquiera sean $x_{1}, \dotsc, x_{k} \in \omega$ y $\alpha_{1}, \dotsc, \alpha_{k} \in \SIGMA$, el
+      programa $\mathcal{P}$ se detiene partiendo del estado
+      \begin{equation*}
+        \lVert x_{1}, \dotsc, x_{k}, \alpha_{1}, \dotsc, \alpha_{k} \rVert
+      \end{equation*}
+      \PN si y solo si $M$ se detiene partiendo de la descripción instantanea
+      \begin{equation*}
+        \left\lfloor q_{0} B \shortmid^{x_{1}} B \dotsc B \shortmid^{x_{k}} B \alpha_{1} B \dotsc B \alpha_{k} B
+        \right\rfloor
+      \end{equation*}
+    \end{enumerate}
+  \end{alertblock}
 \end{frame}
