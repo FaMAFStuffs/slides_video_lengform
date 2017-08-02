@@ -1,28 +1,21 @@
 \begin{frame}
+  \begin{alertblock}{Probaremos}
+    \PN El paradigma computacional de Turing es por lo menos tan expresivo como el paradigma imperativo dado por el
+    lenguaje $\mathcal{S}^{\Sigma}$, es decir, probaremos que toda función $\Sigma$-computable es $\Sigma$-Turing
+    computable.
+  \end{alertblock}
 
-  En lo que sigue probaremos que el paradigma computacional de Turing
-es por lo menos tan expresivo como el paradigma imperativo dado por el
-lenguaje $\mathcal{S}^{\Sigma }$, es decir probaremos que toda funcion $%
-\Sigma $-computable es $\Sigma $-Turing computable\textit{.} Antes un lema
+  \PN Antes un lema:
+  \begin{lemma}
+    \PN Si $f: D_{f} \subseteq \omega^{n}\times \Sigma^{\ast m} \rightarrow \SIGMA$ es $\Sigma$-computable, entonces
+    existe un programa $\mathcal{Q}$, el cual computa a $f$ y cumple con las siguientes propiedades:
+    \begin{enumerate}[1)]
+      \item En $\mathcal{Q}$ no hay instrucciones de la forma $\mathrm{GOTO} \ \mathrm{L}\bar{\imath}$, ni de la forma
+      $\mathrm{L}\bar{j} \ \mathrm{GOTO} \ \mathrm{L}\bar{\imath}$.
 
-\bigskip
-
-\begin{lemma}
-\label{sinGOTO}Si $f:D_{f}\subseteq \omega ^{n}\times \Sigma ^{\ast
-m}\rightarrow \Sigma ^{\ast }$ es $\Sigma $-computable, entonces hay un
-programa $\mathcal{Q}$ el cual computa a $f$ y el cual cumple con las
-siguientes propiedades
-
-\begin{enumerate}
-\item[(1)] En $\mathcal{Q}$ no hay instrucciones de la forma $\mathrm{GOTO}\;%
-\mathrm{L}\bar{\imath}$ ni de la forma $\mathrm{L}\bar{j}\ \mathrm{GOTO}\;%
-\mathrm{L}\bar{\imath}$
-
-\item[(2)] Cuando $\mathcal{Q}$ termina partiendo de un estado cualquiera
-dado, el estado alcansado es tal que las variables numericas tienen todas el
-valor $0$ y las alfabeticas tienen todas exepto $\mathrm{P}1$ el valor $%
-\varepsilon $.
-\end{enumerate}
-\end{lemma}
-
+      \item Cuando $\mathcal{Q}$ termina partiendo de un estado cualquiera dado, el estado alcanzado es tal que las
+      variables numéricas tienen todas el valor $0$ y las alfabéticas tienen, todas exepto $\mathrm{P}1$, el valor
+      $\varepsilon$.
+    \end{enumerate}
+  \end{lemma}
 \end{frame}
