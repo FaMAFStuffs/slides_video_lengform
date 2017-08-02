@@ -1,14 +1,18 @@
 \begin{frame}
+  \begin{theorem}
+    Si $f: D_{f} \subseteq \omega^{n} \times \Sigma^{\ast m} \rightarrow O$ es $\Sigma$-computable, entonces $f$ es
+    $\Sigma$-Turing computable.
+  \end{theorem}
 
-Por supuesto, hay un lema analogo para el caso en que $f$ llega a $\omega $
-en lugar de llegar a $\Sigma ^{\ast }$
+  \begin{proof}
+    \PN Supongamos $O = \SIGMA$. Por el Lema anterior, existe $\mathcal{P} \in \mathrm{Pro}^{\Sigma}$ el cual computa
+    $f$ y tiene las propiedades (1) y (2). Sea $k = \max \{n, m, N(\mathcal{P})\}$ y sea $M_{sim}$ la máquina de Turing
+    con unit que simula a $\mathcal{P}$ respecto de $k$. Como puede observarse, la máquina $M_{sim}$, no necesariamente
+    computará a $f$. Sea $M_{1}$ la siguiente máquina:
+  \end{proof}
 
-\bigskip
-
-Ahora si, el anunciado del teorema:
-
-\begin{theorem}
-Si $f:D_{f}\subseteq \omega ^{n}\times \Sigma ^{\ast m}\rightarrow O$ es $%
-\Sigma $-computable, entonces $f$ es $\Sigma $-Turing computable\textit{.}
-\end{theorem}
+  \begin{figure}[h]
+    \centering
+    \includegraphics[scale=0.19]{graphics/figure_9.png}
+  \end{figure}
 \end{frame}
