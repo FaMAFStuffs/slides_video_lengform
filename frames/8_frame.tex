@@ -1,7 +1,8 @@
 \begin{frame}
 	\begin{block}{Instrucción $\mathrm{P}\bar{\imath} \leftarrow \mathrm{P}\bar{\imath}.a$}
-		\PN Para $1 \leq i \leq k$ y $a \in \Sigma $, sea $M_{i,k}^{a}$ una máquina tal que cualesquiera sean $x_{1},
-    \dotsc, x_{n} \in \omega$ y $\alpha_{1}, \dotsc,\alpha_{m} \in \SIGMA$
+		\PN Para $1 \leq i \leq k$ y $a \in \Sigma $, sea $M_{i,k}^{a}$ una máquina con estado inicial $q_{0}$ y único
+		estado final $q_{f}$ tal que cualesquiera sean $x_{1}, \dotsc, x_{n} \in \omega$ y $\alpha_{1}, \dotsc,\alpha_{m}
+		\in \SIGMA$
 		\minLetter
 		\[
 			\begin{array}{lcl}
@@ -15,8 +16,9 @@
 	\end{block}
 
   \begin{block}{Instrucción $\mathrm{P}\bar{\imath} \leftarrow ^{\curvearrowright}\mathrm{P}\bar{\imath}$}
-    \PN Para $1 \leq i \leq k$, sea $M_{i}^{\curvearrowright}$ una máquina tal que cualesquiera sean $x_{1}, \dotsc,
-    x_{n} \in \omega$ y $\alpha_{1}, \dotsc,\alpha_{m} \in \SIGMA$
+		\PN Para $1 \leq i \leq k$, sea $M_{i,k}^{\curvearrowright}$ una máquina con estado inicial $q_{0}$ y único estado
+		final $q_{f}$ tal que cualesquiera sean $x_{1}, \dotsc, x_{n} \in \omega$ y $\alpha_{1}, \dotsc,\alpha_{m} \in
+		\SIGMA$
     \minLetter
     \[
       \begin{array}{lcl}
