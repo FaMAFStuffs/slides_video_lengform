@@ -1,31 +1,26 @@
 \begin{frame}
-  Notese que%
+  \PN $I_{j}$ cumplirá que:
   \begin{equation*}
-  \begin{array}{lcr}
-  \alpha B\beta _{1}B\beta _{2}B...B\beta _{j}B\gamma  & \overset{\ast }{%
-  \vdash } & \alpha B\beta _{1}B\beta _{2}B...B\beta _{j}B\gamma  \\
-  \ \ \uparrow  &  & \uparrow \ \  \\
-  \ \ q_{0} &  & q_{f}\ \
-  \end{array}%
+    \begin{array}{lcr}
+      \alpha B \beta_{j} B \dotsc B \beta_{2} B \beta_{1} B \gamma &\overset{\ast}{\vdash}& \alpha B \beta_{j} B \dotsc
+        B \beta_{2} B \beta_{1} B \gamma \\
+      \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \uparrow && \uparrow \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \
+        \ \ \ \ \ \ \ \ \ \  \\
+      \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ q_{0} && q_{f} \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \
+        \ \ \ \ \ \ \ \
+    \end{array}%
   \end{equation*}%
-  siempre que $\alpha ,\gamma \in \Gamma ^{\ast }$, $\beta _{1},...,\beta
-  _{j}\in (\Gamma -\{B\})^{\ast }$. Es decir la maquina $D_{j}$ lo unico que
-  hace es mover el cabezal desde el blanco de la izquierda de un bloque
-  determinado, exactamente $j$ bloques a la derecha
+  \PN siempre que $\alpha, \gamma \in \Gamma^{\ast}, \beta_{1}, \dotsc, \beta_{j} \in (\Gamma - \{B\})^{\ast}$. Dejamos
+  al lector la manufactura de esta máquina.
 
-  Analogamente $I_{j}$ sera una maquina que desplaza el cabezal $j$ bloques a
-  la izquierda del blanco que esta escaneando. Es decir $I_{j}$ cumplira que%
+  \vspace{3mm}
+  \PN Para $j \geq 1$, sea $TD_{j}$ una máquina con un solo estado final $q_{f}$ y tal que:
   \begin{equation*}
-  \begin{array}{lcr}
-  \alpha B\beta _{j}B...B\beta _{2}B\beta _{1}B\gamma  & \overset{\ast }{%
-  \vdash } & \alpha B\beta _{j}B...B\beta _{2}B\beta _{1}B\gamma  \\
-  \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \uparrow  &  &
-  \uparrow \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \  \\
-  \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ q_{0} &  & q_{f}\
-  \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \
-  \end{array}%
-  \end{equation*}%
-  siempre que $\alpha ,\gamma \in \Gamma ^{\ast }$, $\beta _{1},...,\beta
-  _{j}\in (\Gamma -\{B\})^{\ast }$. Dejamos al lector la manufactura de esta
-  maquina.
+    \begin{array}{ccc}
+      \alpha B \gamma &\overset{\ast}{\vdash}& \alpha BB \gamma \\
+      \uparrow  && \uparrow \ \ \\
+      q_{0} &  & q_{f} \ \
+    \end{array}
+  \end{equation*}
+  \PN cada vez que $\alpha, \gamma \in \Gamma^{\ast}$ y $\gamma$ tiene exactamente $j$ ocurrencias de $B$.
 \end{frame}
