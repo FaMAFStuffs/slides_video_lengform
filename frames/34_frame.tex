@@ -1,23 +1,16 @@
 \begin{frame}
   \begin{block}{}
-    \PN Supongamos que $(\vec{x},\vec{\alpha}) \in (\omega^{n} \times \Sigma^{\ast m}) - D_{f}$. Debemos ver que $M$ no
-    termina partiendo de:
-    \begin{center}
-      $\left\lfloor q_{0} B \shortmid^{x_{1}} B \dotsc B \shortmid^{x_{n}} B \alpha_{1} B \dotsc B \alpha_{m} B
-      \right\rfloor$ \textcolor{red}{(*)}
-    \end{center}
+    \PN Sea $M_{2}$ la siguiente máquina:
+  \end{block}
+    \begin{figure}[h]
+      \centering
+      \includegraphics[scale=0.3]{graphics/figure_10.png}
+    \end{figure}
 
-    \PN Primero notemos que, ya que $\mathcal{P}$ computa a $f$, tenemos que $\mathcal{P}$ no termina partiendo de
-    $\lVert x_{1}, \dotsc, x_{n}, \alpha_{1}, \dotsc, \alpha_{m}\rVert$ por lo cual $\mathcal{P}$ no termina partiendo
-    de
+  \begin{block}{}
+    \PN Nótese que $M_{2}$ cumple que para cada $\alpha \in \Sigma^{\ast}$
     \begin{equation*}
-      \lVert x_{1}, \dotsc, x_{n}, \overset{k-n}{\overbrace{0,\dotsc,0}}, \alpha_{1}, \dotsc, \alpha_{m},
-      \overset{k-m}{\overbrace{\varepsilon,\dotsc,\varepsilon}} \rVert
+      \left\lfloor q_{0} B^{k+1} \alpha \right\rfloor \overset{\ast}{\vdash} \left\lfloor q_{f} B \alpha \right\rfloor
     \end{equation*}
-    \PN lo cual implica, por el Lema 1, que $M_{sim}$ no termina partiendo de:
-    \begin{center}
-      $\left\lfloor q_{0} B \shortmid^{x_{1}} B \dotsc B \shortmid^{x_{n}} B^{k-n}B \alpha_{1} B \dotsc B \alpha_{m} B
-      \right\rfloor$ \textcolor{red}{(**)}
-    \end{center}
   \end{block}
 \end{frame}

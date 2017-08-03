@@ -1,39 +1,19 @@
 \begin{frame}
-  \begin{block}
-    \PN Supongamos que $\mathcal{P} = I_{1}, \dotsc, I_{n}$. Para cada $i = 1, \dotsc, n$, llamaremos $M_{i}$ a la
-    máquina que simulará el efecto que produce la instrucción $I_{i}$, es decir tomemos:
-    \begin{enumerate}
-      \item[-] $M_{i}=M_{j,k}^{+}$, si $Bas(I_{i})=\mathrm{N}\bar{j}\leftarrow
-      \mathrm{N}\bar{j}+1$
-
-      \item[-] $M_{i}=M_{j,k}^{\dot{-}}$, si $Bas(I_{i})=\mathrm{N}\bar{j}%
-      \leftarrow \mathrm{N}\bar{j}\dot{-}1$
-
-      \item[-] $M_{i}=M_{j,k}^{a}$, si $Bas(I_{i})=\mathrm{P}\bar{j}\leftarrow
-      \mathrm{P}\bar{j}.a$
-
-      \item[-] $M_{i}=M_{j,k}^{\curvearrowright }$, si $Bas(I_{i})=\mathrm{P}\bar{j%
-      }\leftarrow \ ^{\curvearrowright }\mathrm{P}\bar{j}$
-
-      \item[-] $M_{i}=M_{j\leftarrow m}^{\#,k}$, si $Bas(I_{i})=\mathrm{N}\bar{j}%
-      \leftarrow \mathrm{N}\bar{m}$
-
-      \item[-] $M_{i}=M_{j\leftarrow m}^{\ast ,k}$, si $Bas(I_{i})=\mathrm{P}\bar{j%
-      }\leftarrow \mathrm{P}\bar{m}$
-
-      \item[-] $M_{i}=M_{j\leftarrow 0}^{k}$, si $Bas(I_{i})=\mathrm{N}\bar{j}%
-      \leftarrow 0$
-
-      \item[-] $M_{i}=M_{j\leftarrow \varepsilon }^{k}$, si $Bas(I_{i})=\mathrm{P}%
-      \bar{j}\leftarrow \varepsilon $
-
-      \item[-] $M_{i}=M_{\mathrm{SKIP}}$, si $Bas(I_{i})=\mathrm{SKIP}$
-
-      \item[-] $M_{i}=IF_{j,k}$, si $Bas(I_{i})=\mathrm{IF}\;\mathrm{N}\bar{j}%
-      \not=0$\ $\mathrm{GOTO}\;\mathrm{L}\bar{m}$, para algún $m$
-
-      \item[-] $M_{i}=IF_{j,k}^{a}$, si $Bas(I_{i})=\mathrm{IF}\;\mathrm{P}\bar{j}%
-      \;\mathrm{BEGINS}\;a\;\mathrm{GOTO}\;\mathrm{L}\bar{m}$, para algún $m$
-    \end{enumerate}
-  \end{block}
+  \PN Si hacemos funcionar a $M_{sim}$ desde:
+  \[
+    q_{0} B \shortmid^{2} B \shortmid BB \shortmid^{5} B \shortmid^{3} B \#\&\#\# BB \&\& B \#\& B \# B
+  \]
+  \PN obtendremos una sucesión de descripciones instantaneas dentro de las cuales estará la siguiente subsucesión
+  \begin{eqnarray*}
+    && q_{0} B \shortmid^{2} B \shortmid BB \shortmid^{5} B \shortmid^{3} B \#\&\#\# BB \&\& B \#\& B \# B \\
+    && \\
+    && q_{1} B \shortmid^{2} B \shortmid BB \shortmid^{6} B \shortmid^{3} B \#\&\#\# BB \&\& B \#\& B \# B \\
+    && q_{2} B \shortmid^{2} B \shortmid BB \shortmid^{6} B \shortmid^{3} B \#\&\#\# BB \&\& B \#\& B \# B \\
+    && \\
+    && q_{3} B \shortmid^{2} B \shortmid BB \shortmid^{6} B \shortmid^{3} B \&\#\# BB \&\& B \#\& B \# B \\
+    && q_{4} B \shortmid^{2} B \shortmid BB \shortmid^{6} B \shortmid^{3} B \&\#\# BB \&\& B \#\& B \# B \\
+    && \\
+    && q_{si} B \shortmid^{2} B \shortmid BB \shortmid^{6} B \shortmid^{3} B \&\#\# BB \&\& B \#\& B \# B \\
+    && q_{0} B \shortmid^{2} B \shortmid BB \shortmid^{6} B \shortmid^{3} B \&\#\# BB \&\& B \#\& B \# B \\
+  \end{eqnarray*}
 \end{frame}

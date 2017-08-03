@@ -1,18 +1,17 @@
 \begin{frame}
-  \PN Análogamente, para $j \geq 1$, sea $TI_{j}$ una máquina tal que
+  \PN Para cada $j \geq 1$, sea $D_{j}$ la máquina siguiente:
+  \begin{figure}[h]
+    \centering
+    \includegraphics[scale=0.3]{graphics/figure_1.png}
+  \end{figure}
+  \PN Nótese que:
   \begin{equation*}
-    \begin{array}{ccc}
-    \alpha B\sigma \gamma  & \overset{\ast }{\vdash } & \alpha B\gamma  \\
-    \uparrow \  &  & \uparrow  \\
-    q_{0}\ \  &  & q_{f}%
-    \end{array}%
-  \end{equation*}%
-  \PN cada vez que $\alpha \in \Gamma^{\ast}, \sigma \in \Gamma$ y $\gamma$ tiene exactamente $j$ ocurrencias de $B$.
-  Dejamos al lector la construcción de, por ejemplo, $TI_{3}$ para $\Sigma = \{\&,\#\}$.
-
-  \vspace{7mm}
-  \begin{alertblock}
-  \PN Teniendo las máquinas auxiliares antes definidas podemos combinarlas para obtener las máquinas simuladoras de
-  instrucciones.
-\end{alertblock}
+    \begin{array}{lcr}
+      \alpha B \beta_{1} B \beta_{2} B \dotsc B \beta_{j} B \gamma &\overset{\ast}{\vdash}& \alpha B \beta_{1} B
+        \beta_{2} B \dotsc B \beta_{j} B \gamma \\
+      \ \ \uparrow && \uparrow \ \ \\
+      \ \ q_{0} && q_{f}\ \
+    \end{array}
+  \end{equation*}
+  \PN siempre que $\alpha, \gamma \in \Gamma^{\ast}, \beta_{1}, \dotsc, \beta_{j} \in (\Gamma - \{B\})^{\ast}$.
 \end{frame}

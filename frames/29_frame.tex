@@ -1,26 +1,8 @@
 \begin{frame}
-  \begin{proof}
-    \PN Sean:
-    \begin{itemize}
-      \item $\mathcal{P}$ un programa que compute a $f$
-      \item $r \in \mathbb{N}$ tal que $r \geq N(\mathcal{P}), n, m$
-      \item $\mathcal{\tilde{P}}$ el resultado de reemplazar en $\mathcal{P}$ cada instrucción de la forma $\alpha
-      \mathrm{GOTO} \ \mathrm{L}\bar{\imath}$ con $\alpha \in \{\varepsilon\} \cup \{\mathrm{L}\bar{j}: j \in
-      \mathbb{N}\}$ por $\alpha \mathrm{IF \ N}\bar{r} \neq 0 \ \mathrm{GOTO} \ \mathrm{L}\bar{\imath}$.
-    \end{itemize}
-
-    \PN Ahora, sea $\mathcal{Q}$ el siguiente programa:
-    \begin{equation*}
-      \begin{array}{l}
-        \mathrm{N}\bar{r} \leftarrow \mathrm{N}\bar{r} + 1 \\
-        \mathcal{\tilde{P}} \\
-        \mathrm{N}1\leftarrow 0 \\
-        \vdots \\
-        \mathrm{N}\bar{r} \leftarrow 0 \\
-        \mathrm{P}2 \leftarrow \varepsilon  \\
-        \vdots \\
-        \mathrm{P}\bar{r} \leftarrow \varepsilon
-      \end{array}
-    \end{equation*}
-  \end{proof}
+  \PN Una posible forma de diseñar la máquina $M_{i \leftarrow j}^{\ast,k}$ para el caso $\Sigma = \{\&,\#\}$ y $i<j$,
+  es la siguiente:
+  \begin{figure}[h]
+    \centering
+    \includegraphics[scale=0.188]{graphics/figure_7.png}
+  \end{figure}
 \end{frame}

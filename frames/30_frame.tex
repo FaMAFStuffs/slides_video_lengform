@@ -1,18 +1,21 @@
 \begin{frame}
-  \begin{theorem}
-    Si $f: D_{f} \subseteq \omega^{n} \times \Sigma^{\ast m} \rightarrow O$ es $\Sigma$-computable, entonces $f$ es
-    $\Sigma$-Turing computable.
-  \end{theorem}
+  \begin{alertblock}{Probaremos}
+    \PN El paradigma computacional de Turing es por lo menos tan expresivo como el paradigma imperativo dado por el
+    lenguaje $\mathcal{S}^{\Sigma}$, es decir, probaremos que toda función $\Sigma$-computable es $\Sigma$-Turing
+    computable.
+  \end{alertblock}
 
-  \begin{block}{Proof}
-    \PN Supongamos $O = \SIGMA$. Por el Lema anterior, existe $\mathcal{P} \in \mathrm{Pro}^{\Sigma}$ el cual computa
-    $f$ y tiene las propiedades (1) y (2). Sea $k = \max \{n, m, N(\mathcal{P})\}$ y sea $M_{sim}$ la máquina de Turing
-    con unit que simula a $\mathcal{P}$ respecto de $k$. Como puede observarse, la máquina $M_{sim}$, no necesariamente
-    computará a $f$. Sea $M_{1}$ la siguiente máquina:
-  \end{block}
+  \PN Antes un lema:
+  \begin{lemma}
+    \PN Si $f: D_{f} \subseteq \omega^{n}\times \Sigma^{\ast m} \rightarrow \SIGMA$ es $\Sigma$-computable, entonces
+    existe un programa $\mathcal{Q}$, el cual computa a $f$ y cumple con las siguientes propiedades:
+    \begin{enumerate}[1)]
+      \item En $\mathcal{Q}$ no hay instrucciones de la forma $\mathrm{GOTO} \ \mathrm{L}\bar{\imath}$, ni de la forma
+      $\mathrm{L}\bar{j} \ \mathrm{GOTO} \ \mathrm{L}\bar{\imath}$.
 
-  \begin{figure}[h]
-    \centering
-    \includegraphics[scale=0.19]{graphics/figure_9.png}
-  \end{figure}
+      \item Cuando $\mathcal{Q}$ termina partiendo de un estado cualquiera dado, el estado alcanzado es tal que las
+      variables numéricas tienen todas el valor $0$ y las alfabéticas tienen, todas exepto $\mathrm{P}1$, el valor
+      $\varepsilon$.
+    \end{enumerate}
+  \end{lemma}
 \end{frame}

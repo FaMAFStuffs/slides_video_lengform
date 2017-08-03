@@ -1,15 +1,27 @@
 \begin{frame}
-  \begin{example}
-    \PN Sea $\Sigma = \{\&,\#\}$ y sea $\mathcal{P}$ el siguiente programa:
-    \begin{equation*}
-      \begin{array}{ll}
-        \mathrm{L}3 & \mathrm{N}4\leftarrow \mathrm{N}4+1 \\
-        & \mathrm{P}1\leftarrow \ ^{\curvearrowright }\mathrm{P}1 \\
-        & \mathrm{IF\ P}1\ \mathrm{BEGINS\ }\&\ \mathrm{GOTO}\;\mathrm{L}3 \\
-        & \mathrm{P}3\leftarrow \mathrm{P}3.\#
-      \end{array}
-    \end{equation*}
-    \PN Tomemos $k=5$, es claro que $k \geq N(\mathcal{P}) = 4$. A la máquina que simulará a $\mathcal{P}$ respecto de
-    $k$, la llamaremos $M_{sim}$ y será la siguiente:
-\end{example}
+  \begin{block}{Instrucción $\mathrm{IF} \ \mathrm{N}\bar{j} \not = 0 \ \mathrm{GOTO} \ \mathrm{L}\bar{m}$}
+    \PN Para $1 \leq j \leq k$, sea $IF_{j,k}$ una máquina con estado inicial $q_{0}$ y dos estados finales $q_{si}$ y
+    $q_{no}$ tal que cualesquiera sean $x_{1}, \dotsc, x_{k} \in \omega$ y $\alpha_{1}, \dotsc, \alpha_{k} \in \SIGMA$
+    \begin{itemize}
+      \item Si $x_{j} \neq 0$, entonces
+      \[
+        \begin{array}{lcl}
+          B \shortmid^{x_{1}} B \dotsc B \shortmid^{x_{k}} B \alpha_{1} B \dotsc B \alpha_{k} &\overset{\ast}{\vdash}& B
+            \shortmid^{x_{1}} B \dotsc B \shortmid^{x_{k}} B \alpha_{1} B \dotsc B \alpha_{k} \\
+          \uparrow && \uparrow \\
+          q_{0} && q_{si}
+        \end{array}
+      \]
+
+      \item Si $x_{j} = 0$, entonces
+      \[
+        \begin{array}{lcl}
+          B \shortmid^{x_{1}} B \dotsc B \shortmid^{x_{k}} B \alpha_{1} B \dotsc B \alpha_{k} &\overset{\ast}{\vdash}& B
+            \shortmid^{x_{1}} B \dotsc B \shortmid^{x_{k}} B \alpha_{1} B \dotsc B \alpha_{k} \\
+          \uparrow && \uparrow \\
+          q_{0} && q_{no}
+        \end{array}
+      \]
+    \end{itemize}
+  \end{block}
 \end{frame}

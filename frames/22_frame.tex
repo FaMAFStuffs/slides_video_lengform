@@ -1,25 +1,27 @@
 \begin{frame}
-  \PN $I_{j}$ cumplirá que:
-  \begin{equation*}
-    \begin{array}{lcr}
-      \alpha B \beta_{j} B \dotsc B \beta_{2} B \beta_{1} B \gamma &\overset{\ast}{\vdash}& \alpha B \beta_{j} B \dotsc
-        B \beta_{2} B \beta_{1} B \gamma \\
-      \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \;\; \uparrow && \uparrow \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \
-        \ \ \  \\
-      \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ q_{0} && q_{f} \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \
-    \end{array}
-  \end{equation*}
-  \PN siempre que $\alpha, \gamma \in \Gamma^{\ast}, \beta_{1}, \dotsc, \beta_{j} \in (\Gamma - \{B\})^{\ast}$. Dejamos
-  al lector la manufactura de esta máquina.
+  \begin{alertblock}{Lema}
+    \PN Sea $\mathcal{P} \in \mathrm{Pro}^{\Sigma}$ y sea $k \geq N(\mathcal{P})$. Supongamos que en $\mathcal{P}$ no
+    hay instrucciones de la forma $\mathrm{GOTO} \ \mathrm{L}\bar{m}$ ni de la forma $\mathrm{L}\bar{n} \ \mathrm{GOTO}
+    \ \mathrm{L}\bar{m}$. Sean:
+    \begin{itemize}
+      \item Para cada $a \in \Sigma \cup \{\shortmid\}$, sea $\tilde{a}$ un nuevo símbolo
+      \item $\Gamma = \Sigma \cup \{B, \shortmid\} \cup \{\tilde{a}: a \in \Sigma \cup \{\shortmid\}\}$
+    \end{itemize}
+    \PN entonces existe una máquina de Turing determinística con unit $M = \left(Q, \Gamma, \Sigma, \delta, q_{0}, B,
+    \shortmid,\{q_{f}\}\right)$, la cual satisface:
+    \begin{enumerate}[1)]
+      \item $\delta (q_{f},\sigma) = \emptyset$, para cada $\sigma \in \Gamma$.
 
-  \vspace{3mm}
-  \PN Para $j \geq 1$, sea $TD_{j}$ una máquina con un solo estado final $q_{f}$ y tal que:
-  \begin{equation*}
-    \begin{array}{ccc}
-      \alpha B \gamma &\overset{\ast}{\vdash}& \alpha BB \gamma \\
-      \uparrow  && \uparrow \ \ \\
-      q_{0} &  & q_{f} \ \
-    \end{array}
-  \end{equation*}
-  \PN cada vez que $\alpha, \gamma \in \Gamma^{\ast}$ y $\gamma$ tiene exactamente $j$ ocurrencias de $B$.
+      \item Cualesquiera sean $x_{1}, \dotsc, x_{k} \in \omega$ y $\alpha_{1}, \dotsc, \alpha_{k} \in \SIGMA$, el
+      programa $\mathcal{P}$ se detiene partiendo del estado
+      \begin{equation*}
+        \lVert x_{1}, \dotsc, x_{k}, \alpha_{1}, \dotsc, \alpha_{k} \rVert
+      \end{equation*}
+      \PN si y solo si $M$ se detiene partiendo de la descripción instantánea
+      \begin{equation*}
+        \left\lfloor q_{0} B \shortmid^{x_{1}} B \dotsc B \shortmid^{x_{k}} B \alpha_{1} B \dotsc B \alpha_{k} B
+        \right\rfloor
+      \end{equation*}
+    \end{enumerate}
+  \end{alertblock}
 \end{frame}

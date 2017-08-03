@@ -1,8 +1,18 @@
 \begin{frame}
-  \PN Una posible forma de diseñar la máquina $M_{i \leftarrow j}^{\ast,k}$ para el caso $\Sigma = \{\&,\#\}$ y $i<j$,
-  es la siguiente:
-  \begin{figure}[h]
-    \centering
-    \includegraphics[scale=0.188]{graphics/figure_7.png}
-  \end{figure}
+  \PN Análogamente, para $j \geq 1$, sea $TI_{j}$ una máquina tal que
+  \begin{equation*}
+    \begin{array}{ccc}
+    \alpha B \sigma \gamma &\overset{\ast}{\vdash}& \alpha B \gamma \\
+    \uparrow \ && \uparrow \\
+    q_{0} \ \ && q_{f}
+    \end{array}
+  \end{equation*}
+  \PN cada vez que $\alpha \in \Gamma^{\ast}, \sigma \in \Gamma$ y $\gamma$ tiene exactamente $j$ ocurrencias de $B$.
+  Dejamos al lector la construcción de, por ejemplo, $TI_{3}$ para $\Sigma = \{\&,\#\}$.
+
+  \vspace{7mm}
+  \begin{alertblock}
+  \PN Teniendo las máquinas auxiliares antes definidas podemos combinarlas para obtener las máquinas simuladoras de
+  instrucciones.
+\end{alertblock}
 \end{frame}

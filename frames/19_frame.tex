@@ -1,27 +1,12 @@
 \begin{frame}
-  \begin{alertblock}{Lema}
-    \PN Sea $\mathcal{P} \in \mathrm{Pro}^{\Sigma}$ y sea $k \geq N(\mathcal{P})$. Supongamos que en $\mathcal{P}$ no
-    hay instrucciones de la forma $\mathrm{GOTO} \ \mathrm{L}\bar{m}$ ni de la forma $\mathrm{L}\bar{n} \ \mathrm{GOTO}
-    \ \mathrm{L}\bar{m}$. Sean:
-    \begin{itemize}
-      \item Para cada $a \in \Sigma \cup \{\shortmid\}$, sea $\tilde{a}$ un nuevo símbolo
-      \item $\Gamma = \Sigma \cup \{B, \shortmid\} \cup \{\tilde{a}: a \in \Sigma \cup \{\shortmid\}\}$
-    \end{itemize}
-    \PN entonces existe una máquina de Turing determinística con unit $M = \left(Q, \Gamma, \Sigma, \delta, q_{0}, B,
-    \shortmid,\{q_{f}\}\right)$, la cual satisface:
-    \begin{enumerate}[1)]
-      \item $\delta (q_{f},\sigma) = \emptyset$, para cada $\sigma \in \Gamma$.
-
-      \item Cualesquiera sean $x_{1}, \dotsc, x_{k} \in \omega$ y $\alpha_{1}, \dotsc, \alpha_{k} \in \SIGMA$, el
-      programa $\mathcal{P}$ se detiene partiendo del estado
-      \begin{equation*}
-        \lVert x_{1}, \dotsc, x_{k}, \alpha_{1}, \dotsc, \alpha_{k} \rVert
-      \end{equation*}
-      \PN si y solo si $M$ se detiene partiendo de la descripción instantánea
-      \begin{equation*}
-        \left\lfloor q_{0} B \shortmid^{x_{1}} B \dotsc B \shortmid^{x_{k}} B \alpha_{1} B \dotsc B \alpha_{k} B
-        \right\rfloor
-      \end{equation*}
-    \end{enumerate}
-  \end{alertblock}
+  \PN Ya que la máquina $M_{i}$ puede tener uno o dos estados finales, la representaremos de la siguiente manera:
+  \begin{figure}[h]
+    \centering
+    \includegraphics[scale=0.4]{graphics/figure_5.png}
+  \end{figure}
+  \begin{itemize}
+    \item Si $M_{i}$ tiene \textbf{un solo estado final}, este está representado por el círculo de abajo a la izquierda
+    \item Si $M_{i}$ tiene \textbf{dos estados finales}, el estado final de la derecha corresponde al estado $q_{si}$ y
+      el de la izquierda abajo al estado $q_{no}$.
+  \end{itemize}
 \end{frame}

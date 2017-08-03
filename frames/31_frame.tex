@@ -1,20 +1,26 @@
 \begin{frame}
-  \begin{block}{}
-    \PN Cuando $n=0$ debemos interpretar que $D_{0} = \left(\{q_{0},q_{f}\}, \Gamma, \Sigma, \delta, q_{0}, B,
-    \shortmid, \{q_{f}\}\right)$, con $\delta(q_{0},B) = \{(q_{f},B,K)\}$ y $\delta = \emptyset$ en cualquier otro caso.
+  \begin{proof}
+    \PN Sean:
+    \begin{itemize}
+      \item $\mathcal{P}$ un programa que compute a $f$
+      \item $r \in \mathbb{N}$ tal que $r \geq N(\mathcal{P}), n, m$
+      \item $\mathcal{\tilde{P}}$ el resultado de reemplazar en $\mathcal{P}$ cada instrucción de la forma $\alpha
+      \mathrm{GOTO} \ \mathrm{L}\bar{\imath}$ con $\alpha \in \{\varepsilon\} \cup \{\mathrm{L}\bar{j}: j \in
+      \mathbb{N}\}$ por $\alpha \mathrm{IF \ N}\bar{r} \neq 0 \ \mathrm{GOTO} \ \mathrm{L}\bar{\imath}$.
+    \end{itemize}
 
-    \vspace{3mm}
-    \PN Nótese que $M_{1}$ cumple que, para cada $(\vec{x},\vec{\alpha}) \in \omega^{n} \times \Sigma^{\ast m}$
-    \normLetter
+    \PN Ahora, sea $\mathcal{Q}$ el siguiente programa:
     \begin{equation*}
-      \left\lfloor q_{0} B \shortmid^{x_{1}} B \dotsc B \shortmid^{x_{n}} B \alpha_{1} B \dotsc B \alpha_{m} B
-      \right\rfloor \overset{\ast}{\vdash} \left\lfloor q_{f} B \shortmid^{x_{1}} B \dotsc B \shortmid^{x_{n}} B^{k-n}B
-      \alpha_{1} B \dotsc B \alpha_{m} B \right\rfloor
+      \begin{array}{l}
+        \mathrm{N}\bar{r} \leftarrow \mathrm{N}\bar{r} + 1 \\
+        \mathcal{\tilde{P}} \\
+        \mathrm{N}1\leftarrow 0 \\
+        \vdots \\
+        \mathrm{N}\bar{r} \leftarrow 0 \\
+        \mathrm{P}2 \leftarrow \varepsilon  \\
+        \vdots \\
+        \mathrm{P}\bar{r} \leftarrow \varepsilon
+      \end{array}
     \end{equation*}
-
-    \vspace{3mm}
-    \sizeOfLetterThird
-    \PN Nótese que en la confección de $M_{1}$, para el caso $m>0$ podriamos haber usado directamente la $TD_{m}$ en
-    lugar de usar $D_{m}$.
-  \end{block}
+  \end{proof}
 \end{frame}

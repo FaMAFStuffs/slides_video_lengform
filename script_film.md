@@ -1,5 +1,10 @@
 # GUIÓN HABLADO
 
+## TO DO's
+1. Correguir la flecha de la figura 8
+2. Rehacer la figura 3
+3. 
+
 ### Toma 0:
 
 "A continuación introduciremos una notación que aún no está en el apunte pero nos será útil". 
@@ -23,11 +28,13 @@ su funcionamiento cuando partimos de estados de la anterior forma".
 
 ### Toma 3:
 
-* "Que se corresponde con las descripciones instantaneas de la computación anterior"
+* "A continuación veremos un ejemplo de como se arma la máquina simuladora de un programa dado".
+
+* "Que se corresponde con las descripciones instantaneas de la computación anterior".
 
 ### Toma 4:
 
-* "Ahora describiremos en general como puede armarse la máquina simuladora de $\mathcal{P}$, respecto de $k$. Para poder hacer concretamente las máquinas recién descriptas deberemos diseñar antes algunas máquinas auxiliares".
+* "Ahora describiremos en general como puede armarse la máquina simuladora de $\mathcal{P}$, respecto de $k$".
 
 ### Toma 5:
 
@@ -38,6 +45,8 @@ probar que toda función $\Sigma$-computable es $\Sigma$-Turing computable".
 ### Toma 6:
 
 * "En esta etapa nos dedicaremos a explicar como construir las distintas máquinas simuladoras de instrucciones".
+
+* Para poder hacer concretamente las máquinas recién descriptas deberemos diseñar antes algunas máquinas auxiliares".
 
 * "Es decir la máquina D_{j} lo único que hace es mover el cabezal desde el blanco de la izquierda de un bloque determinado, exactamente j bloques a la derecha".
 
