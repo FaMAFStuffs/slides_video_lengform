@@ -1,27 +1,29 @@
 \begin{frame}
   \begin{block}{}
-    \PN Pero entonces el Lema \ref{simulacion} nos dice que
+    \begin{itemize}
+      \item La máquina $M$ se detiene en $\left\lfloor q_{5} B f(\vec{x},\vec{\alpha}) \right\rfloor$, ya que $q_{5}$ es
+        el estado final de una copia de $M_{2}$ y por lo tanto no sale ninguna flecha desde él.
 
-    \begin{enumerate}
-    \item[(***)] $\left\lfloor q_{0}B\shortmid ^{x_{1}}B...B\shortmid
-    ^{x_{n}}B^{k-n}B\alpha _{1}B...B\alpha _{m}B\right\rfloor \overset{\ast }{%
-    \underset{M_{sim}}{\vdash }}\left\lfloor q_{f}B^{k+1}f(\vec{x},\vec{\alpha}%
-    )\right\rfloor $
-    \end{enumerate}
+      \item Ya que $\mathcal{P}$ computa a $f$ y tiene la propiedad (2) del Lema 2, tenemos que $\mathcal{P}$ termina
+        partiendo de $\lVert x_{1}, \dotsc, x_{n}, \alpha_{1}, \dotsc, \alpha_{m} \rVert$ y llega al estado $\lVert
+        f(\vec{x},\vec{\alpha}) \rVert$, o lo que es lo mismo, $\mathcal{P}$ termina partiendo de
+        \begin{equation*}
+          \lVert x_{1}, \dotsc, x_{n}, \overset{k-n}{\overbrace{0,\dotsc,0}}, \alpha_{1}, \dotsc, \alpha_{m},
+          \overset{k-m}{\overbrace{\varepsilon,\dotsc,\varepsilon}} \rVert
+        \end{equation*}
+        \PN y llega al estado
+        \begin{equation*}
+          \lVert \overset{k}{\overbrace{0,\dotsc,0}}, f(\vec{x}, \vec{\alpha}), \overset{k-1}{\overbrace{\varepsilon,
+          \dotsc,\varepsilon}} \rVert
+        \end{equation*}
 
-    Como ya lo vimos, si hacemos funcionar a $M$ desde $\left\lfloor
-    q_{0}B\shortmid ^{x_{1}}B...B\shortmid ^{x_{n}}B\alpha _{1}B...B\alpha
-    _{m}B\right\rfloor $, llegaremos (via la copia de $M_{1}$ dentro de $M$)
-    indefectiblemente a la siguiente descripcion instantanea%
-    \begin{equation*}
-    \left\lfloor q_{2}B\shortmid ^{x_{1}}B...B\shortmid ^{x_{n}}B^{k-n}B\alpha
-    _{1}B...B\alpha _{m}B\right\rfloor
-    \end{equation*}%
-    Luego (***) nos dice que, via la copia de $M_{sim}$ dentro de $M$,
-    llegaremos a $\left\lfloor q_{3}B^{k+1}f(\vec{x},\vec{\alpha})\right\rfloor $
-    e inmediatamente a $\left\lfloor q_{4}B^{k+1}f(\vec{x},\vec{\alpha}%
-    )\right\rfloor $. Finalmente, via la copia de $M_{2}$ dentro de $M$,
-    llegaremos a $\left\lfloor q_{5}Bf(\vec{x},\vec{\alpha})\right\rfloor $, lo
-    cual termina de demostrar que $M$ computa a $f$
+        \PN Pero entonces el Lema 1 nos dice que:
+        \begin{center}
+          $\left\lfloor q_{0}B\shortmid ^{x_{1}}B\dotsc B\shortmid
+          ^{x_{n}}B^{k-n}B\alpha _{1}B\dotsc B\alpha _{m}B\right\rfloor \overset{\ast }{%
+          \underset{M_{sim}}{\vdash }}\left\lfloor q_{f}B^{k+1}f(\vec{x},\vec{\alpha}%
+          )\right\rfloor $ \textcolor{red}{(***)}
+        \end{center}
+    \end{itemize}
   \end{block}
 \end{frame}
